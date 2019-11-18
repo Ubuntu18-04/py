@@ -1,0 +1,11 @@
+n1=eval(input("Enter the first number"))
+n2=eval(input("Enter the second number:"))
+print("The numbers before swapping=",n1,n2)
+t=n1
+n1=n2
+n2=t
+print("Numbers after swapping with temporary variable=",n1,n2)
+n1=n1+n2
+n2=n1-n2
+n1=n1-n2
+print("Numbers after swapping without temporary variable=",n1,n2)
