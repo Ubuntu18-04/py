@@ -1,15 +1,12 @@
-num_list=[]
-n=int(input("Enter number of values for num_list: "))
-print("Enter the elements:")
-for i in range(n):
-    num_list.append(int(input()))
-mode={}
-for i in num_list:
-    mode.setdefault(i,0)
-    mode[i]+=1
-print(mode)
-m=0
-for i in mode:
-    if m <= mode[i]:
-        m = mode[i]
-print("mode =",m)
+n=int(input("size of the list"))
+ls=[]
+D={}
+for i in range(0,n):
+  i=int(input("enter num"))
+  ls.append(i)
+for i in ls:
+    if(ls[i] in D):
+      D[ls[i]]=D[ls[i]]+1
+    else:
+      D[ls[i]]=1
+print(D)

@@ -1,28 +1,35 @@
-a={}
-n=eval(input("Enter the number of inputs"))
-no,p,c,m,b=[],[],[],[]
+A={}
+S,p_marks,c_marks,m_marks,b_marks=[],[],[],[],[]
+n=int(input("enter the number of records"))
 for i in range(n):
-    no.append(input("Enter the serial numbers in order"))
+    S.append(input("enter srn"))
 for i in range(n):
-    p.append(input("Enter the physics numbers in order"))
+    p_marks.append(int(input("enter marks  in physics")))
 for i in range(n):
-    c.append(input("Enter the chem numbers in order"))
+    c_marks.append(int(input("enter C marks")))
 for i in range(n):
-    m.append(input("Enter the math numbers in order"))
+    m_marks.append(int(input("enter m marks")))
 for i in range(n):
-    b.append(input("Enter the bio numbers in order"))
+    b_marks.append(int(input("enter b marks")))
 for i in range(n):
-    a[no[i]]=[p[i],c[i],m[i],b[i]]
-for i in a:
+    A[S[i]]=[p_marks[i],c_marks[i],m_marks[i],b_marks[i]]
+
+for i in A:
     print(i,"==>",end=" ")
-    for j in a[i]:
-        print(j,end=" ")
+    for j in A[i]:
+        print(j,end=' ')
 print()
 
-tot={}
-for i in a:
-    tot[i]=sum(a[i])
-for i,j in sorted(tot.items(),key**lambda,a:a[l]):
+Total={}
+for i in A:
+    Total[i]=sum(A[i])
+for i,j in sorted(Total.items(),key=lambda a: a[1]):
     print(i,"==>",j)
 
-details={}
+student_details={}
+for i in m_marks:
+    student_details[i]=[] 
+    for j in A:
+        if(i==A[j][2]):
+            student_details[i].append(j)
+print(student_details)

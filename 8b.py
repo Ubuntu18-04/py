@@ -6,6 +6,7 @@ def mod(d):
             res[d[i]].append(i)
         else:
             res[d[i]].append(i)
+
     return res
-x={'apple':'fruit','cat':'mammal','mango':'fruit','dog':'mammal','veg':'beans'}
-print(mod(x))
+X={'apple':'fruit','cat':'mammal','beans':'veg','dog':'mammal','mango':'fruit','brinjal':'veg','potato':'veg','horse':'mammal'}
+print(mod(X))
