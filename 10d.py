@@ -1,23 +1,13 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Nov 18 10:52:18 2018
-
-@author: Sankalp
-"""
-
 l=['a',0,2]
 for i in l:
+    print(i)
     try:
-        print("Reciprocal is:",1/i)
-        
+        print("reciprocal: ",1/i )
     except ZeroDivisionError as e:
-        print("Cannot divide by 0:",e)
-            
+        print("zero can't be divided ",e)
     except TypeError as e:
-        print("Only numbers can be divided:",e)
-                
+        print("can divide only nos ",e)
     except Exception as e:
         print(e)
-                    
     finally:
-        print("Iteration done\n")
+        print("Iteration done")
